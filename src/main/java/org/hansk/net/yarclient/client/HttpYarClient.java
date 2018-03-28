@@ -102,14 +102,15 @@ public class HttpYarClient implements YarClient {
     public HttpYarClient(String yarUrl, int connectTimeout, int requestTimeout, String packageType){
         this.yarUrl       = yarUrl;
         this.packageType = packageType;
-        switch (packageType){
-            case "json":
+        int packageTypeInt = packageType.equals("json") ? 1 : (packageType.equals("php") ? 2 : 3);
+        switch (packageTypeInt){
+            case 1:
                 yarProtocol = new YarProtocol("token",new JsonPackager());
                 break;
-            case "php":
+            case 2:
                 yarProtocol = new YarProtocol("token",new PHPPackager());
                 break;
-            case "msgpack":
+            case 3:
                 yarProtocol = new YarProtocol("token",new MsgPackPackager());
                 break;
             default:
