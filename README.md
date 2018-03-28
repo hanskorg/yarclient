@@ -1,9 +1,12 @@
 # yarclient
 ## Introduction
+
   Yar is a RPC framework which aims to provide a simple and easy way to do communication between PHP applications
   this project is an implement for Java.
   for more infomation see: 
   https://github.com/laruence/yar
+
+[![Build Status](https://travis-ci.org/hanskorg/yarclient.svg?branch=master)](https://travis-ci.org/hanskorg/yarclient)
 ## example
 ```
 public class SimpleClient {

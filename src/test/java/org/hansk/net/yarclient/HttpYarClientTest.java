@@ -11,17 +11,19 @@ import static org.junit.Assert.*;
  */
 public class HttpYarClientTest {
 
-    private interface TestA{
-        public void test(String a);
+    private interface API{
+        public String test(String a,String option);
     }
 
 
     @Test
     public void call() throws Exception {
-            HttpYarClient yarClient = new HttpYarClient("http://domain/rpc/test",3000,3000,"json");
-            TestA object = (TestA) yarClient.call(TestA.class);
+            HttpYarClient yarClient = new HttpYarClient("http://10limi.com/rpc.php",3000,3000,"json");
+        API object = (API) yarClient.call(API.class);
 //            Assert.assertNotEquals(object.test("1"),"1");
-            object.test("1");
+            String ret = object.test("1","2");
+            System.out.println(ret);
+
     }
 
 }
