@@ -17,7 +17,7 @@
         <hc.version>4.5.5</hc.version>
         <log4j.slf4j.version>1.7.9</log4j.slf4j.version>
         <common.logging.version>1.2</common.logging.version>
-        <fastjson.version>1.2.17</fastjson.version>
+        <fastjson.version>1.2.31</fastjson.version>
         <msgpack.version>0.6.12</msgpack.version>
     </properties>
     <dependencies>
